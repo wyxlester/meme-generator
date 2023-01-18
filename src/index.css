@@ -11,3 +11,69 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+nav {
+  height: 70px;
+  align-items: center;
+  display: flex;
+  background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+  color: white;
+  box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
+.nav--logo {
+  height: 100%;
+  margin-right: 15px;
+  align-items: center;
+}
+
+.nav--brand {
+  font-size: 1.5rem;
+  margin-right: auto;
+  font-weight: 500;
+}
+
+.nav--items {
+  font-size: 1rem;
+  font-weight: 500;
+  font-weight: 900;
+}
+
+.form {
+  text-align: center;
+}
+
+.form--input {
+  font-family: "Karla", sans-serif;
+  border-radius: 5px;
+  border: 1px solid #D5D4D8;
+  text-indent: 5px;
+  width: 100%;
+  height: 40px;
+}
+
+.form--button {
+  font-family: "Karla", sans-serif;
+  border-radius: 10px;
+  background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  height: 40px;
+  font-weight: 900;
+}
+/*
+.form {
+  display: grid;
+  grid-template: 40px 40px / 1fr 1fr;
+  gap: 17px;
+}
+
+.form--input {
+  font-family: "Karla", sans-serif;
+  border-radius: 5px;
+  border: 1px solid #D5D4D8;
+  text-indent: 5px;
+} */
