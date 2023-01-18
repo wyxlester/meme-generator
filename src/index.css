@@ -73,3 +73,41 @@ nav {
 .main-wrapper {
   height: 100vh;
 }
+
+.state--button-yes {
+  font-family: "Karla", sans-serif;
+  border-radius: 8px;
+  background: #1dc769;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 20%;
+  height: 40px;
+  font-weight: 900;
+  margin: 10px 20px;
+}
+
+.state--button-no {
+  font-family: "Karla", sans-serif;
+  border-radius: 8px;
+  background: #ff6f85;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 20%;
+  height: 40px;
+  font-weight: 900;
+  margin: 10px 20px;
+}
+
+.state--value {
+  background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+}

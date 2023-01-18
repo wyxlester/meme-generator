@@ -11,6 +11,12 @@ const Meme = () => {
     console.log(memesImage)
   }
 
+  const [cuteRight, setCuteRight] = React.useState(true)
+
+  const clickedYes = () => { setCuteRight(true) }
+
+  const clickedNo = () => { setCuteRight(false) }
+
   return (
     <div>
       <div className='row py-4 my-2 g-3'>
@@ -45,7 +51,21 @@ const Meme = () => {
         </div>
       </div>
 
-      <img src={memesImage} alt='meme' className='img-fluid rounded mx-auto d-block pt-3 meme--image'/>
+      <div className='row py-3 g-3'>
+        <div className='col-sm-12 col-md-6 my-auto mx-auto'>
+          <img src={memesImage} alt='meme' className='img-fluid rounded mx-auto d-block pt-3 meme--image'/>
+        </div>
+        <div className='col-sm-12 col-md-6 my-auto mx-auto text-center'>
+          <h1>Cute or not?</h1>
+          <button className='state--button-yes' onClick={clickedYes}>
+            Yes
+          </button>
+          <button className='state--button-no' onClick={clickedNo}>
+            No
+          </button>
+          <h3>{cuteRight ? 'Yes' : 'No'}</h3>
+        </div>
+      </div>
     </div>
   )
 }
