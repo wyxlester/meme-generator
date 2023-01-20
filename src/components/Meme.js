@@ -11,7 +11,7 @@ const Meme = () => {
     console.log(memesImage)
   }
 
-  const [cuteRight, setCuteRight] = React.useState(true)
+  const [cuteRight, setCuteRight] = React.useState(false)
 
   const clickedYes = () => { setCuteRight(true) }
 
@@ -63,7 +63,7 @@ const Meme = () => {
           <button className='state--button-no' onClick={clickedNo}>
             No
           </button>
-          <h3>{cuteRight ? 'Yes' : 'No'}</h3>
+          <h3>{cuteRight === false ? 'No' : 'Yes'}</h3>
         </div>
       </div>
     </div>
