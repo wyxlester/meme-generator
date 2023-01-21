@@ -3,18 +3,26 @@ import memesData from '../memesData.js'
 import Troll from '../assets/troll_face.png'
 
 const Meme = () => {
-  const [memesImage, setMemesImage] = React.useState(Troll)
+  const [memes, setMeme] = React.useState({
+    topText: '',
+    bottomText: '',
+    randomImage: `${Troll}`
+  })
+
+  const [allMemesImage, setAllMemesImage] = React.useState(memesData)
+
   const getMemeImage = () => {
-    const memesArray = memesData.data.memes
+    const memesArray = allMemesImage.data.memes
     const randomNumber = Math.floor(Math.random() * memesArray.length)
-    setMemesImage(memesArray[randomNumber].url)
-    console.log(memesImage)
+    const url = memesArray[randomNumber].url
+    setMeme(prevMeme => ({
+      ...prevMeme,
+      randomImage: url
+  }))
   }
 
   const [cuteRight, setCuteRight] = React.useState(false)
-
   const clickedYes = () => { setCuteRight(true) }
-
   const clickedNo = () => { setCuteRight(false) }
 
   return (
@@ -53,7 +61,7 @@ const Meme = () => {
 
       <div className='row py-3 g-3'>
         <div className='col-sm-12 col-md-6 my-auto mx-auto'>
-          <img src={memesImage} alt='meme' className='img-fluid rounded mx-auto d-block pt-3 meme--image'/>
+          <img src={memes.randomImage} alt='meme' className='img-fluid rounded mx-auto d-block pt-3 meme--image'/>
         </div>
         <div className='col-sm-12 col-md-6 my-auto mx-auto text-center'>
           <h1>Cute or not?</h1>
